@@ -1,4 +1,6 @@
 const baseUrl = Cypress.env("baseUrl");
+
+// saya membuat function karena agar telihat lebih rapih. walaupun sebenarnya bisa menggunakan metode POM
 function landingPage() {
     cy.viewport("macbook-13");
     cy.visit(baseUrl);
@@ -39,7 +41,7 @@ describe("Customer melakukan login", () => {
             .should("have.value", "081234567890");
         cy.get("#_r_1_-form-item > .flex").type("Xs7NGgxcFa");
         cy.get(".space-y-4 > .flex-col > .bg-primary").click();
-        cy.get("#radix-_r_2_ > .hidden").contains("John").should("be.visible"); // => bisa disesuaikan kalau sudah besar project.
+        cy.get("#radix-_r_2_ > .hidden").contains("John").should("be.visible"); // => nama user bisa disesuaikan kalau sudah besar project.
         //url sama seperti landing page, jadi ga nge cek cy.url()
     });
     it("Customer login dengan kondisi nomor telepon belum terdaftar", () => {
