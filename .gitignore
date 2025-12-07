@@ -1,0 +1,33 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# Cypress cache
+.cypress-cache/
+CypressCache/
+.cache/
+dist/
+
+# Cypress screenshots & videos
+cypress/videos/
+cypress/screenshots/
+
+# Output temporary
+*.log
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*.local
+
+# MacOS Finder
+.AppleDouble
+.LSOverride
