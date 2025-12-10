@@ -52,28 +52,28 @@ describe("Customer melakukan login", () => {
     });
     it("Customer login dengan kondisi tanpa input data", () => {
         landingPage();
-        negativeCases("","")
-        labelValidationMsg("Nomor Telepon")
-        labelValidationMsg("Password")
+        negativeCases("", "");
+        labelValidationMsg("Nomor Telepon");
+        labelValidationMsg("Password");
         validationMessage("Nomor telepon minimal 10 digit");
         validationMessage("Password minimal 6 karakter");
     });
     it("Customer login dengan kondisi hanya input phone number yang valid", () => {
         landingPage();
         negativeCases("081234567890", "");
-        labelValidationMsg("Password")
+        labelValidationMsg("Password");
         validationMessage("Password minimal 6 karakter");
     });
     it("Customer login dengan kondisi hanya input password", () => {
         landingPage();
         negativeCases("", "passowrd");
-        labelValidationMsg("Nomor Telepon")
+        labelValidationMsg("Nomor Telepon");
         validationMessage("Nomor telepon minimal 10 digit");
     });
     it("Customer login dengan kondisi nomor telepon valid tetapi tanpa 0", () => {
         landingPage();
         negativeCases("81234567890", "Xs7NGgxcFa");
-        labelValidationMsg("Nomor Telepon")
+        labelValidationMsg("Nomor Telepon");
         validationMessage("Format nomor telepon tidak valid");
     });
     it("Customer login dengan kondisi nomor telepon valid tetapi salah password", () => {
@@ -84,7 +84,7 @@ describe("Customer melakukan login", () => {
     it("Customer login dengan kondisi nomor telepon lebih dari 15 digit", () => {
         landingPage();
         negativeCases("0812345678901212", "Xs7NGgxcFa");
-        labelValidationMsg("Nomor Telepon")
+        labelValidationMsg("Nomor Telepon");
         validationMessage("Nomor telepon maksimal 15 digit");
     });
 });
