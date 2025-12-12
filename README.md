@@ -8,8 +8,33 @@ Setiap folder memiliki fokus materi yang berbeda, mulai dari Authorization API, 
 ### 📂 Quiz 3 – Authorization
 ### 📂 Tugas 16 – Intercept
 ### 📂 Tugas 17 – Page-Object-Model-pom
+### 📂 Tugas 18 – API Automation using Cypress
 ### 📦 Instalasi & Menjalankan Test
 ### 📘 Catatan
+
+### Struktur Folder
+
+```bash
+📦cypress
+ ┣ 📂downloads
+ ┣ 📂e2e
+ ┃ ┣ 📂api
+ ┃ ┃ ┣ 📜api-job.cy.js
+ ┃ ┃ ┗ 📜api-users.cy.js
+ ┃ ┣ 📜authorization.cy.js
+ ┃ ┣ 📜intercept.cy.js
+ ┃ ┗ 📜pom.cy.js
+ ┣ 📂fixtures
+ ┃ ┣ 📜dataCustomer.json
+ ┃ ┣ 📜dataUsers.json
+ ┃ ┗ 📜example.json
+ ┗ 📂support
+ ┃ ┣ 📂pages
+ ┃ ┃ ┣ 📜LoginPage.js
+ ┃ ┃ ┗ 📜ReqresApi.js
+ ┃ ┣ 📜commands.js
+ ┃ ┗ 📜e2e.js
+```
 
 ## 📂 Quiz 3 – Authorization
 Folder ini berisi script untuk menguji fitur Authorization API, menggunakan metode Bearer Token atau Basic Auth sesuai instruksi quiz.
@@ -25,19 +50,13 @@ Berisi pengujian:
 - Akses endpoint yang membutuhkan Authorization
 - Validasi positive & negative case
 
-### Tujuan Pembelajaran
-
-✔ Memahami mekanisme otentikasi API
-✔ Mengelola token menggunakan Cypress
-✔ Melakukan request ke secured API
-✔ Membangun validasi untuk berbagai skenario auth
-
 ## 📂 Tugas 16 – Intercept
 Tugas ini berfokus pada penggunaan cy.intercept() untuk memanipulasi, mengamati, dan memvalidasi request/response Network API di UI.
 
 ### Isi File
 
 ```intercept.cy.js```
+
 Script ini mencakup:
 
 - Menangkap request API tertentu
@@ -46,33 +65,10 @@ Script ini mencakup:
 - Menunggu API selesai sebelum lanjut ke UI
 - Validasi data API yang ditampilkan pada UI
 
-### Tujuan Pembelajaran
-
-✔ Memahami role intercept pada UI automation
-✔ Mocking & stubbing untuk test stabil
-✔ Validasi kesesuaian data UI dengan network API
 
 ## 📂 Tugas 17 – Page-Object-Model (POM)
 
 Tugas ini mengimplementasikan struktur POM agar automation lebih bersih, maintainable, dan scalable.
-
-### Struktur Folder
-
-📦cypress
- ┣ 📂downloads
- ┣ 📂e2e
- ┃ ┣ 📜authorization.cy.js
- ┃ ┣ 📜intercept.cy.js
- ┃ ┗ 📜pom.cy.js
- ┣ 📂fixtures
- ┃ ┣ 📜dataCustomer.json
- ┃ ┗ 📜example.json
- ┗ 📂support
- ┃ ┣ 📂pages
- ┃ ┃ ┗ 📜LoginPage.js
- ┃ ┣ 📜commands.js
- ┃ ┗ 📜e2e.js
-
 
 ### Isi File
 
@@ -92,20 +88,26 @@ Menyimpan seluruh selector & function login
 
 - Menguji positive test
 - Negative test (invalid credential, empty field, wrong format, dsb)
-- Tujuan Pembelajaran
 
-✔ Memisahkan test-case & business logic
-✔ Meningkatkan reusability
-✔ Mempermudah scaling test UI di masa depan
+## 📂 Tugas 18 - API Automation Testing
+Tugas ini berfokus pada api testing
+
+### Isi File
+
+- ```api-users.cy.js```
+- ```api-job.cy.js```
 
 ## 📦 Instalasi & Menjalankan Test
 
 ### 1️⃣ Install dependencies
-```npm install@14.0.2```
+```bash
+npm install
+```
 
-### 2️⃣ Menjalankan via CLI
-```npm run cy:open```
-
+### 2️⃣ Running with NPM
+```bash
+npm run cy:open
+```
 
 # 📘 Catatan
 ```Setiap tugas ditempatkan sesuai instruksi kelas. Dokumentasi ini dibuat agar reviewer dapat menavigasi repo dengan mudah.``` 
